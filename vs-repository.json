@@ -1,0 +1,28 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/sped-mobi/schemas/master/src/json/vs-repository-schema.json",
+  "title": "Visual Studio Dynamic Solutions",
+  "author": "Brad Marshall",
+  "description": "Central repository configuration for Visual Studio",
+  "repositories": {
+    "Arcade": {
+      "id": "9F67E803-E23D-41A6-8A0A-13B5C3663236",
+      "description": "Basic class-library-based repository solution.",
+      "category": "Basic",
+      "connection": {
+        "gitUrl": "https://github.com/sped-mobi/arcade.git",
+        "zipUrl": "https://codeload.github.com/sped-mobi/arcade/zip/master",
+        "iconUrl": "https://github.com/sped-mobi/vs-repositories/blob/master/Repository.png?raw=true"
+      }
+    },
+    "VsSDK": {
+      "id": "0649D98A-46E0-4825-B86E-688E97D79BE7",
+      "description": "Visual Studio Extension initial setup.",
+      "category": "Advanced",
+      "connection": {
+        "gitUrl": "https://github.com/sped-mobi/vssdk.git",
+        "zipUrl": "https://codeload.github.com/sped-mobi/vssdk/zip/master",
+        "iconUrl": "https://github.com/sped-mobi/vs-repositories/blob/master/Extension.png?raw=true"
+      }
+    } 
+  }
+}

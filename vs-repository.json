@@ -5,24 +5,159 @@
   "description": "Central repository configuration for Visual Studio",
   "repositories": {
     "Arcade": {
-      "id": "9F67E803-E23D-41A6-8A0A-13B5C3663236",
-      "description": "Basic class-library-based repository solution.",
-      "category": "Basic",
+      "author": "Brad Marshall <bmarshall@sped.mobi>",
+      "preferNameDirectory": true,
+      "classifications": [ "Solution File" ],
+      "shortName": "arcade",
+      "name": "Arcade Solution",
+      "sourceName": "ArcadeRepo",
+      "description": "Arcade Solution",
+      "identity": "Microsoft.VisualStudio.DotNetTemplates.Arcade",
+      "groupIdentity": "Microsoft.VisualStudio.DotNetTemplates",
+      "tags": {
+        "language": "C#",
+        "type": "item"
+      },
       "connection": {
         "gitUrl": "https://github.com/sped-mobi/arcade.git",
         "zipUrl": "https://codeload.github.com/sped-mobi/arcade/zip/master",
         "iconUrl": "https://github.com/sped-mobi/vs-repositories/blob/master/Repository.png?raw=true"
       }
+
     },
     "VsSDK": {
-      "id": "0649D98A-46E0-4825-B86E-688E97D79BE7",
-      "description": "Visual Studio Extension initial setup.",
-      "category": "Advanced",
+      "author": "Brad Marshall <bmarshall@sped.mobi>",
+      "preferNameDirectory": true,
+      "classifications": [ "Solution File" ],
+      "shortName": "vssdk",
+      "name": "VsSDK Solution",
+      "sourceName": "ArcadeRepo",
+      "description": "Visual Studio Extensibility Solution",
+      "identity": "Microsoft.VisualStudio.DotNetTemplates.Extensibility.VsSDK",
+      "groupIdentity": "Microsoft.VisualStudio.DotNetTemplates.Extensibility",
+      "tags": {
+        "language": "C#",
+        "type": "item"
+      },
+      "guids": [
+        "75E87631-D74D-4DC7-8EC2-8CEDC72F6489",
+        "68C0B63F-CCE5-417F-858E-B9700D5035B8",
+        "002FFFF8-16E3-46B9-95DC-C0352411AD32",
+        "2071BDC0-8E16-4FCD-99AA-E1F61E8F65B3",
+        "2717B768-D091-42FB-A343-AE85C8B9A6F7",
+        "EE528E6C-C3DC-4AB8-8342-2DB0A5FE3C7F",
+        "900C536E-B4DA-4962-9F97-E1E9AA7B39BB",
+        "E25FC295-803D-41B5-AF60-C3DC588CD79F",
+        "85F09892-FEC5-42C2-A8FF-CF0EE5F5A98B",
+        "86D7842C-6096-4408-88DF-BC26EE4981E5",
+        "D6D5A90F-FDBB-4714-95D2-994D5954C5E7",
+        "FB642328-09EE-459E-A902-9E9DB004DB50",
+        "F87D445F-0C6D-4F2E-A734-EAADCD6FA340"
+      ],
+      "symbols": {
+        "RepoName": {
+          "datatype": "text",
+
+          "type": "parameter",
+          "isRequired": true,
+          "replaces": "$(RepoName)",
+          "description": "The name of the repository for GitHub.com"
+        },
+        "PackageName": {
+          "datatype": "text",
+          "type": "parameter",
+          "isRequired": true,
+          "replaces": "$(PackageName)",
+          "description": "The name of the Visual Studio Package."
+        },
+        "SettingsPackageName": {
+          "datatype": "text",
+          "type": "parameter",
+          "isRequired": true,
+          "replaces": "$(SettingsPackageName)",
+          "description": "The name of the Visual Studio Package."
+        },
+        "RootNamespace": {
+          "datatype": "text",
+          "type": "parameter",
+          "isRequired": true,
+          "replaces": "$(RootNamespace)",
+          "description": "The root namespace for projects in the solution."
+        },
+
+        "ExtensionDisplayName": {
+          "datatype": "text",
+          "type": "parameter",
+          "defaultValue": "MyExtensionDisplayName",
+          "isRequired": false,
+          "replaces": "$(ExtensionDisplayName)",
+          "description": "The display name of the extension in Visual Studio."
+        },
+
+        "ExtensionDescription": {
+          "datatype": "text",
+          "type": "parameter",
+          "isRequired": false,
+          "defaultValue": "Descrption of my extension.",
+          "replaces": "$(ExtensionDescription)",
+          "description": "The display name of the extension in Visual Studio."
+        },
+
+        "RepoBranch": {
+          "datatype": "text",
+          "type": "parameter",
+          "isRequired": false,
+          "defaultValue": "master",
+          "replaces": "$(RepoBranch)",
+          "description": "The repository branch name."
+        },
+        "RepoOrg": {
+          "datatype": "text",
+          "type": "parameter",
+          "isRequired": false,
+          "defaultValue": "sped-mobi",
+          "replaces": "$(RepoOrg)",
+          "description": "The organization associated with the repository account holder in GitHub."
+        },
+        "TargetFramework": {
+          "datatype": "text",
+          "type": "parameter",
+          "isRequired": false,
+          "defaultValue": "net472",
+          "replaces": "$(TargetFramework)",
+          "description": "The default .NET Framework of the solution."
+        },
+        "OfficialName": {
+          "datatype": "text",
+          "type": "parameter",
+          "isRequired": false,
+          "defaultValue": "MyProduct",
+          "replaces": "$(OfficialName)",
+          "description": "The Visual Studio Package Official Name."
+        },
+        "ProductDetails": {
+          "datatype": "text",
+          "type": "parameter",
+          "isRequired": false,
+          "defaultValue": "My Product Details",
+          "replaces": "$(ProductDetails)",
+          "description": "The Visual Studio Package Product Description/Details."
+        },
+        "ProductID": {
+          "datatype": "text",
+          "type": "parameter",
+          "isRequired": false,
+          "defaultValue": "MyProductID",
+          "replaces": "$(ProductID)",
+          "description": "The Visual Studio Package Product ID."
+        }
+
+      },
       "connection": {
         "gitUrl": "https://github.com/sped-mobi/vssdk.git",
         "zipUrl": "https://codeload.github.com/sped-mobi/vssdk/zip/master",
         "iconUrl": "https://github.com/sped-mobi/vs-repositories/blob/master/Extension.png?raw=true"
       }
-    } 
+    }
   }
 }
